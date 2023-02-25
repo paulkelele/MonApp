@@ -1,0 +1,4 @@
+..Le fichier go.work permet le multi-modules
+..Chaque module a son go.mod
+Pour ajouter un go.work (A faire une seule fois) -> go work init
+Pour ajouter les modules au go.work -> go work use ./<rep du module>
