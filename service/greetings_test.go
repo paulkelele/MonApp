@@ -9,6 +9,7 @@ import (
 ..Le nom du fichier de test doit obligatoirement etre la concatenation du fichier que l'on veut tester avec _test.go.
 Ce fichier de test doit être dans le même package que le fichier testé.
 ..Le nom des methodes de tests doivent obligatoirement commencer par Test
+..Pour tester lancer go test dans le reportoire ou se trouve le fichier de test
 /**
 
 
