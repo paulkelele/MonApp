@@ -8,17 +8,17 @@ import (
 )
 
 func main() {
-	ad:=readFile("t.txt", 8192)
+	ad:=readFile("t.txt")
 	fmt.Println(string(ad))
 }
 
-func readFile(file string, buffSize int32)(string){
+func readFile(file string)(string){
 	f, err := os.Open(file)
     if err != nil {
         log.Fatalf("unable to read file: %v", err)
     }
     defer f.Close()
-    buf := make([]byte, buffSize)
+    buf := make([]byte, 8192)
 	data :=""
     for {
         n, err := f.Read(buf)
