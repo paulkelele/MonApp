@@ -5,11 +5,24 @@ import (
     "log"
     "io"
 	"os"
+	"sync"
+	
 )
 
+var wg sync.WaitGroup
+
 func main() {
-	ad:=readFile("t.txt")
-	fmt.Println(string(ad))
+	// ad:=readFile("t.txt")
+	// fmt.Println(string(ad))
+	wg.Add(1)
+	go test()
+	wg.Wait()
+	 
+}
+
+func test(){
+	defer wg.Done()
+	fmt.Println("ddd")
 }
 
 func readFile(file string)(string){
