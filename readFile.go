@@ -6,13 +6,13 @@ import (
     "io"
 	"os"
 	"sync"
-	
 )
 
 var wg sync.WaitGroup
 
 func main() {
-	// ad:=readFile("t.txt")
+	
+	//ad:=readFile("t.txt")
 	// fmt.Println(string(ad))
 	wg.Add(1)
 	go test()
